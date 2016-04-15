@@ -57,7 +57,9 @@ object TowersOfHanoi {
     message("Tower 1 [ " + towers(0).stcArray.mkString("\t") + "]\nTower 3 [ " + towers(2).stcArray.mkString("\t") + "]")
     // Recursively pull disks from source tower to destination tower
     moveDisks(nDisks, 0, 1, 2);
-    message("After swapping"); message("Tower 3 :[ " + towers(2).stcArray.mkString("\t") + "]")
+    message("After swapping");
+    message("Tower 1 [ " + towers(0).stcArray.mkString("\t") + "]\nTower 3 [ " + towers(2).stcArray.mkString("\t") + "]")
+
   }
 
   def moveDisks(nDisk: Int, src: Int, temp: Int, des: Int): Unit = {

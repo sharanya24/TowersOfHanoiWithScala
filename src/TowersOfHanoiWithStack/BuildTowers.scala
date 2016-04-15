@@ -40,8 +40,10 @@ class BuildTowers(towerSize: Int) {
    */
   def popDiskFromTower(): Int = {
     val diskRemoved: Int = this.stcArray(top)
-    top -= 1
+    this.stcArray(top)=0 // replace top disk weight to zero
+    this.top -= 1        // move top position
     return diskRemoved
+  
   }
   
 }
