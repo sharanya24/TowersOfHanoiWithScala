@@ -36,8 +36,8 @@ object TowersOfHanoi {
 
   }
 
-  def getSrcTowerWithDisks(nDisks: Int): BuildTowers = {
-    val tower = new BuildTowers(nDisks)
+  def getSrcTowerWithDisks(nDisks: Int): Towers = {
+    val tower = new Towers(nDisks)
     pushDisks(nDisks)
     @annotation.tailrec
     def pushDisks(disk: Int): Unit = {
@@ -60,7 +60,7 @@ object TowersOfHanoi {
 
     if (nDisks > 0) { // check for user input greater than zero
       // create towers of type stack
-      val towers: Array[BuildTowers] = Array[BuildTowers](new BuildTowers(nDisks), new BuildTowers(nDisks), new BuildTowers(nDisks))
+      val towers: Array[Towers] = Array[Towers](new Towers(nDisks), new Towers(nDisks), new Towers(nDisks))
       for (i <- 0 to towers.length - 1) {
         towers(i).towerId = i
       }
@@ -77,7 +77,7 @@ object TowersOfHanoi {
     }
   }
 
-  def moveDisks(nDisk: Int, src: BuildTowers, temp: BuildTowers, des: BuildTowers): List[Steps] = {
+  def moveDisks(nDisk: Int, src: Towers, temp: Towers, des: Towers): List[Steps] = {
     nDisk match {
 
       case 1 => {

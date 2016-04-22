@@ -7,7 +7,7 @@ case class Steps(src: Int, des:Int, diskMoved: Int) { // Move is to store the st
   override def toString():String = "Pick the disc " + diskMoved + " from tower " + src + " and push into " + des+ " tower"
 }
 
-class BuildTowers(towerSize: Int) {
+class Towers(towerSize: Int) {
   var top: Int = -1
   val stcArray = new Array[Int](towerSize)
    var towerId:Int=_
